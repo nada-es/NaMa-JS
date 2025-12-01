@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Contacto — NaMa</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Leaflet CSS (required for map styles) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css">
+    <!-- Leaflet Routing Machine (for route calculation) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css">
+  </head>
+  <body>
+    <header>
+      <div class="logo">NaMa</div>
+    <form id="site-search" class="search-form" role="search" aria-label="Buscar en el sitio">
+      <input id="search-input" type="search" placeholder="Buscar..." aria-label="Buscar">
+      <button id="search-toggle" class="search-toggle" type="button" aria-label="Buscar">🔍</button>
+      <div class="search-meta"><span id="search-count" aria-live="polite"></span></div>
+      <div id="search-dropdown" class="search-dropdown" aria-hidden="true"></div>
+    </form>
+      <nav class="navbar">
+        <a href="index.html">Inicio</a>
+        <a href="galeria.html">Galería</a>
+        <a href="presupuesto.html">Presupuesto</a>
+        <a href="contacto.html" class="active">Contacto</a>
+      </nav>
+    </header>
+   
+  <main>
+    <h1>Contacto</h1>
+
+    <section>
+      <h2>Datos de contacto</h2>
+      <p>Teléfono: 600 000 000</p>
+      <p>Email: info@nama.com</p>
+      <p>Dirección: Calle Falsa 123, Ciudad</p>
+    </section>
+
+    <section>
+      <h2>Mapa</h2>
+      <div id="map" style="height: 400px;"></div>
+      <div id="route-controls" style="margin-top:10px;display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
+        <label style="display:flex;gap:8px;align-items:center;">
+          <span style="font-size:.95rem;color:var(--muted);">Destino:</span>
+          <input id="route-input" placeholder="Haz click en el mapa o escribe lat,lng" style="padding:6px;border-radius:6px;border:1px solid #d1d5db;min-width:220px;">
+        </label>
+        <button id="calc-route">Calcular ruta</button>
+        <button id="clear-route" type="button">Borrar ruta</button>
+        <small style="color:var(--muted);font-size:.9rem">Pulsa en el mapa para establecer tu ubicación como destino</small>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="social">
+      <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook (abre en nueva pestaña)">
+        <img src="img/facebook.svg" alt="Facebook" width="24" height="24">
+      </a>
+      <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" aria-label="Twitter (abre en nueva pestaña)">
+        <img src="img/twitter.svg" alt="Twitter" width="24" height="24">
+      </a>
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram (abre en nueva pestaña)">
+        <img src="img/instagram.svg" alt="Instagram" width="24" height="24">
+      </a>
+    </div>
+    <div class="info">
+      <p>Calle Falsa 123, Ciudad</p>
+      <p>Aviso legal - NaMa 2025</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/search.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.min.js"></script>
+  <script src="js/mapa.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="800" height="600" rx="16" fill="#fff6f0" />
+  <g>
+    <rect x="40" y="80" width="720" height="380" rx="10" fill="url(#p2)" />
+    <defs>
+      <linearGradient id="p2" x1="0" x2="1">
+        <stop offset="0" stop-color="#fff9f2" />
+        <stop offset="1" stop-color="#ffd8b2" />
+      </linearGradient>
+    </defs>
+  </g>
+  <g font-family="Segoe UI, Roboto, Arial" text-anchor="middle" fill="#5a3316">
+    <text x="400" y="320" font-size="36" font-weight="700">Proyecto 2</text>
+    <text x="400" y="360" font-size="18" fill="#8b5a34">Tienda online</text>
+  </g>
+</svg>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+ <head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Galería – NaMa</title>
+   <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">NaMa</div>
+    <form id="site-search" class="search-form" role="search" aria-label="Buscar en el sitio">
+      <input id="search-input" type="search" placeholder="Buscar..." aria-label="Buscar">
+      <button id="search-toggle" class="search-toggle" type="button" aria-label="Buscar">🔍</button>
+      <div class="search-meta"><span id="search-count" aria-live="polite"></span></div>
+      <div id="search-dropdown" class="search-dropdown" aria-hidden="true"></div>
+    </form>
+    <nav class="navbar">
+      <a href="index.html">Inicio</a>
+      <a href="galeria.html" class="active">Galería</a>
+      <a href="presupuesto.html">Presupuesto</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Add gallery markup here as needed, example: -->
+    <h1>Galería</h1>
+    <div id="galeria" class="galeria-grid"></div>
+    <div id="lightbox" class="lightbox hidden">
+      <button id="cerrar-lightbox" type="button" aria-label="Cerrar" class="close-btn">&times;</button>
+      <img id="lightbox-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="Imagen ampliada">
+      <p id="lightbox-caption"></p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="social">
+      <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook (abre en nueva pestaña)">
+        <img src="img/facebook.svg" alt="Facebook" width="24" height="24">
+      </a>
+      <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" aria-label="Twitter (abre en nueva pestaña)">
+        <img src="img/twitter.svg" alt="Twitter" width="24" height="24">
+      </a>
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram (abre en nueva pestaña)">
+        <img src="img/instagram.svg" alt="Instagram" width="24" height="24">
+      </a>
+    </div>
+    <div class="info">
+      <p>Calle Falsa 123, Ciudad</p>
+      <p>Aviso legal - NaMa 2025</p>
+    </div>
+  </footer>
+  <script src="js/galeria.js"></script>
+  <script src="js/search.js"></script>
+</body>
+</html>

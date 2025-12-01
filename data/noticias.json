@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "titulo": "Lanzamiento de nueva colección",
+    "fecha": "2025-12-01",
+    "resumen": "Presentamos nuestra nueva línea de productos con envío a todo el país.",
+    "url": "galeria.html"
+  },
+  {
+    "id": 2,
+    "titulo": "Oferta de fin de año",
+    "fecha": "2025-11-20",
+    "resumen": "Descuentos especiales en servicios seleccionados durante diciembre.",
+    "url": "presupuesto.html"
+  }
+]

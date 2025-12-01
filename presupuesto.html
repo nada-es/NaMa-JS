@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Presupuesto — NaMa</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header>
+      <div class="logo">NaMa</div>
+      <form id="site-search" class="search-form" role="search" aria-label="Buscar en el sitio">
+        <input id="search-input" type="search" placeholder="Buscar..." aria-label="Buscar">
+        <button id="search-toggle" class="search-toggle" type="button" aria-label="Buscar">🔍</button>
+        <div class="search-meta"><span id="search-count" aria-live="polite"></span></div>
+        <div id="search-dropdown" class="search-dropdown" aria-hidden="true"></div>
+      </form>
+      <nav class="navbar">
+        <a href="index.html">Inicio</a>
+        <a href="galeria.html">Galería</a>
+        <a href="presupuesto.html" class="active">Presupuesto</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+    </header>
+   
+  <main>
+    <h1>Solicitar presupuesto</h1>
+
+    <form id="form-presupuesto">
+      <fieldset>
+        <legend>Datos de contacto</legend>
+
+        <label>Nombre
+          <input type="text" id="nombre" name="nombre" maxlength="15" required>
+        </label>
+
+        <label>Apellidos
+          <input type="text" id="apellidos" name="apellidos" maxlength="40" required>
+        </label>
+
+        <label>Teléfono
+          <input type="text" id="telefono" name="telefono" maxlength="9" required>
+        </label>
+
+        <label>Correo electrónico
+          <input type="email" id="email" name="email" required>
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Presupuesto</legend>
+
+        <label>Producto
+          <select id="producto" name="producto">
+            <option value="web_basica" data-precio="500">Web básica (500€)</option>
+            <option value="web_avanzada" data-precio="900">Web avanzada (900€)</option>
+            <option value="tienda_online" data-precio="1300">Tienda online (1300€)</option>
+          </select>
+        </label>
+
+        <label>Plazo (meses)
+          <input type="number" id="plazo" name="plazo" min="1" max="24" value="12">
+        </label>
+
+        <fieldset>
+          <legend>Extras</legend>
+          <label>
+            <input type="checkbox" class="extra" data-precio="100"> SEO básico (+100€)
+          </label>
+          <label>
+            <input type="checkbox" class="extra" data-precio="200"> Mantenimiento anual (+200€)
+          </label>
+          <label>
+            <input type="checkbox" class="extra" data-precio="150"> Diseño personalizado (+150€)
+          </label>
+        </fieldset>
+
+        <div class="resultado">
+          <p>Presupuesto final: <span id="total">0</span> €</p>
+        </div>
+
+        <label>
+          <input type="checkbox" id="condiciones"> Acepto las condiciones de privacidad
+        </label>
+
+        <button type="submit">Enviar presupuesto</button>
+        <button type="reset">Restablecer</button>
+      </fieldset>
+    </form>
+
+    <div id="mensaje-resultado"></div>
+  </main>
+
+  <footer>
+    <div class="social">
+      <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook (abre en nueva pestaña)">
+        <img src="img/facebook.svg" alt="Facebook" width="24" height="24">
+      </a>
+      <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" aria-label="Twitter (abre en nueva pestaña)">
+        <img src="img/twitter.svg" alt="Twitter" width="24" height="24">
+      </a>
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram (abre en nueva pestaña)">
+        <img src="img/instagram.svg" alt="Instagram" width="24" height="24">
+      </a>
+    </div>
+    <div class="info">
+      <p>Calle Falsa 123, Ciudad</p>
+      <p>Aviso legal - NaMa 2025</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/presupuesto.js"></script>
+</body>
+</html>
