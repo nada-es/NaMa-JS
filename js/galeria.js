@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
   const imagenes = [
-    { src: "img/foto1.svg", titulo: "Proyecto 1" },
-    { src: "img/foto2.svg", titulo: "Proyecto 2" },
-    { src: "img/foto3.svg", titulo: "Proyecto 3" },
-    { src: "img/foto4.svg", titulo: "Proyecto 4" },
-    { src: "img/foto5.svg", titulo: "Proyecto 5" },
-    { src: "img/foto6.svg", titulo: "Proyecto 6" }
+    { src: "../img/foto1.svg", titulo: "Proyecto 1" },
+    { src: "../img/foto2.svg", titulo: "Proyecto 2" },
+    { src: "../img/foto3.svg", titulo: "Proyecto 3" },
+    { src: "../img/foto4.svg", titulo: "Proyecto 4" },
+    { src: "../img/foto5.svg", titulo: "Proyecto 5" },
+    { src: "../img/foto6.svg", titulo: "Proyecto 6" }
   ];
 
   const galeriaDiv = document.getElementById("galeria");

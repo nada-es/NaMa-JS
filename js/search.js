@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // load global search index (optional). If missing, fall back to page-local behavior
   let globalIndex = null;
-  fetch('data/search-index.json').then(r => {
+  fetch('js/search-index.json').then(r => {
     if (!r.ok) throw new Error('no index');
     return r.json();
   }).then(list => globalIndex = list).catch(()=> { /* no global index available */ });

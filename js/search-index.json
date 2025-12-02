@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Inicio — NaMa",
+    "url": "index.html",
+    "type": "page",
+    "excerpt": "Bienvenido a NaMa — Soluciones web modernas. Servicios: Desarrollo web, diseño y consultoría.",
+    "tags": ["inicio","noticias","servicios","NaMa"]
+  },
+  {
+    "title": "Galería — NaMa",
+    "url": "views/galeria.html",
+    "type": "gallery",
+    "excerpt": "Galería dinámica con proyectos: Proyecto 1, Proyecto 2, Proyecto 3...",
+    "tags": ["galeria","proyecto","imagen"]
+  },
+  {
+    "title": "Presupuesto — NaMa",
+    "url": "views/presupuesto.html",
+    "type": "form",
+    "excerpt": "Solicitar presupuesto. Datos de contacto y opciones: Web básica, Web avanzada, Tienda online. Extras: SEO, mantenimiento, diseño personalizado.",
+    "tags": ["presupuesto","producto","plazo","extras"]
+  },
+  {
+    "title": "Contacto — NaMa",
+    "url": "views/contacto.html",
+    "type": "contact",
+    "excerpt": "Datos de contacto, dirección y mapa interactivo — Calle Falsa 123, Ciudad.",
+    "tags": ["contacto","mapa","direccion","NaMa"]
+  }
+]

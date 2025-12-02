@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const noticiasContainer = document.getElementById("lista-noticias");
   if (!noticiasContainer) return;
 
-  fetch("data/noticias.json")
+  fetch("js/noticias.json")
     .then(res => res.json())
     .then(noticias => {
       noticias.forEach(n => {
