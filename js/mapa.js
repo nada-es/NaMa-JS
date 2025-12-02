@@ -205,33 +205,12 @@ document.addEventListener("DOMContentLoaded", () => {
     navigator.geolocation.getCurrentPosition(handleLocationSuccess, handleLocationError, {enableHighAccuracy:true, timeout:10000});
   }
 
-  // check permission state first — querying Permissions API does not trigger a prompt
-  if (navigator && navigator.permissions && navigator.permissions.query){
-    try{
-      navigator.permissions.query({name:'geolocation'}).then(p => {
-        geoPermissionState = p.state; // 'granted', 'denied' or 'prompt'
-        if (p.state === 'granted'){
-          // permission already granted — it's safe to obtain location without prompting
-          requestUserLocation();
-        } else {
-          // do not auto-request if permission is 'prompt' or 'denied'
-          setLocationStatus(p.state === 'prompt' ? 'no activada' : 'permiso denegado');
-        }
-        p.onchange = () => {
-          geoPermissionState = p.state;
-          if (p.state === 'granted') requestUserLocation();
-        };
-      }).catch(() => {
-        // Permissions query failed — to avoid unexpected prompts, don't auto-request
-        setLocationStatus('no activada');
-      });
-    }catch(e){
-      setLocationStatus('no activada');
-    }
-  } else {
-    // Permissions API not available: avoid auto-request so the page won't prompt unexpectedly
-    setLocationStatus('no activada');
-  }
+  // Request user location on each page load/refresh. This will trigger the
+  // browser permission prompt every time the user visits the page (unless the
+  // user has permanently blocked location for this origin). If the user
+  // refuses, the page continues to work with the default route.
+  setLocationStatus('solicitando permiso...');
+  requestUserLocation();
 
   // allow manual request via button (will prompt if browser state is 'prompt')
   if (locateBtn){
