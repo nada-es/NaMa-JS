@@ -7,11 +7,30 @@ document.addEventListener('DOMContentLoaded', () => {
   const toggleBtn = document.getElementById('search-toggle');
 
   // load global search index (optional). If missing, fall back to page-local behavior
+  // Try a few candidate paths so pages that live in `views/` (nested) can still
+  // find the index without changing the workspace structure.
   let globalIndex = null;
-  fetch('js/search-index.json').then(r => {
-    if (!r.ok) throw new Error('no index');
-    return r.json();
-  }).then(list => globalIndex = list).catch(()=> { /* no global index available */ });
+  async function loadGlobalIndex(){
+    const candidates = [
+      '/js/search-index.json', // server-root relative (works when served from localhost)
+      'js/search-index.json',  // page-root relative (works for root pages)
+      '../js/search-index.json', // for pages inside views/ (e.g., views/contacto.html)
+      './js/search-index.json'
+    ];
+    for (const c of candidates){
+      try{
+        const r = await fetch(c);
+        if (!r || !r.ok) continue;
+        const data = await r.json();
+        globalIndex = data;
+        return;
+      }catch(err){
+        // try next candidate
+      }
+    }
+  }
+  // fire-and-forget; globalIndex will be populated when available
+  loadGlobalIndex().catch(()=>{});
 
   function normalize(s){return (s||'').toString().trim().toLowerCase();}
 
